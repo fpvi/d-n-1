@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chi tiết sản phẩm - Rudo Watch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <img class="logo placeholder-logo" src="img/logoweb.png" onclick="window.location.href='index.html'" alt="">
+
+    <nav class="main-nav">
+      <a class="nav-item" href="#">Collections</a>
+      <a class="nav-item" href="#">Men's watch</a>
+      <a class="nav-item" href="#">Women's watch</a>
+      <a class="nav-item" href="#">News</a>
+      <a class="nav-item" href="#">Introduce</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-box">EN</div>
+      <div class="icon placeholder-icon-sm"><img src="img/finding.svg" alt=""></div>
+      <div class="icon placeholder-icon-sm"><img src="img/user.svg" alt=""></div>
+      <div class="icon placeholder-icon-sm"><img src="img/cart.svg" alt="" onclick="window.location.href='cart.html'"></div>
+    </div>
+  </div>
+</header>
+
+<!-- Product Detail Section -->
+<section class="product-detail container">
+  <div class="detail-wrapper" id="detail-wrapper">
+    <div class="detail-image">
+      <img src="img/sp1.png" alt="Yacht–Master 42">
+    </div>
+
+    <div class="detail-info">
+      <h1 class="detail-title">Yacht–Master 42</h1>
+      <p class="detail-meta">42mm • Black Golden</p>
+      <p class="detail-price">9.200.000₫</p>
+
+      <p class="detail-desc">
+        Chiếc đồng hồ sang trọng với thiết kế tinh tế, được chế tác từ chất liệu cao cấp và bộ máy tự động chính xác. 
+        Yacht–Master 42 là lựa chọn hoàn hảo cho những ai yêu thích sự đẳng cấp và bền bỉ.
+      </p>
+
+      <div class="detail-actions">
+        <button class="btn-buy">Mua ngay</button>
+        <button class="btn-add" onclick="addToCart(p.id)" >🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Review Section -->
+<section class="product-review container">
+  <h2 class="review-title">Đánh giá sản phẩm</h2>
+
+  <div class="review-summary">
+    <div class="average-score">
+      <span class="score">4.8</span>
+      <div class="stars">
+        ★★★★★
+      </div>
+      <p>128 đánh giá</p>
+    </div>
+    <div class="rating-bars">
+      <div class="rating-row"><span>5 ★</span><div class="bar"><div style="width:90%"></div></div></div>
+      <div class="rating-row"><span>4 ★</span><div class="bar"><div style="width:70%"></div></div></div>
+      <div class="rating-row"><span>3 ★</span><div class="bar"><div style="width:25%"></div></div></div>
+      <div class="rating-row"><span>2 ★</span><div class="bar"><div style="width:10%"></div></div></div>
+      <div class="rating-row"><span>1 ★</span><div class="bar"><div style="width:5%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="review-list">
+    <div class="review-item">
+      <div class="review-header">
+        <strong>Minh Khang</strong>
+        <span class="stars">★★★★★</span>
+      </div>
+      <p class="review-text">Đồng hồ rất đẹp, dây đeo chắc chắn, nhận hàng nhanh. Rất hài lòng với chất lượng.</p>
+      <p class="review-date">02/10/2025</p>
+    </div>
+
+    <div class="review-item">
+      <div class="review-header">
+        <strong>Thu Hà</strong>
+        <span class="stars">★★★★☆</span>
+      </div>
+      <p class="review-text">Mẫu mã sang trọng, đúng như hình. Tuy nhiên hộp hơi móp nhẹ khi giao hàng.</p>
+      <p class="review-date">28/09/2025</p>
+    </div>
+  </div>
+
+  <div class="review-form">
+    <h3>Gửi đánh giá của bạn</h3>
+    <form>
+      <div class="star-select">
+        <label>Chọn đánh giá:</label>
+        <span class="stars">☆ ☆ ☆ ☆ ☆</span>
+      </div>
+      <textarea placeholder="Viết cảm nhận của bạn về sản phẩm..."></textarea>
+      <button type="submit">Gửi đánh giá</button>
+    </form>
+  </div>
+</section>
+
+<!-- Related Products Section -->
+<section class="detail-related container">
+  <h2 class="detail-related-title">Sản phẩm liên quan</h2>
+  <div class="detail-related-grid" id="related-grid">
+    <!-- JS sẽ render sản phẩm liên quan vào đây -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4>VỀ RUDOWATCH.VN</h4>
+      <ul>
+        <li><a href="#">Giới thiệu về Rudowatch.vn</a></li>
+        <li><a href="#">Phản ánh – khiếu nại</a></li>
+        <li><a href="#">Chứng nhận đại lý</a></li>
+        <li><a href="#">Tin tức công ty</a></li>
+        <li><a href="#">Top list đồng hồ</a></li>
+        <li><a href="#">Kiến thức đồng hồ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>CHÍNH SÁCH CHUNG</h4>
+      <ul>
+        <li><a href="#">Điều khoản thanh toán</a></li>
+        <li><a href="#">Chính sách bảo hành</a></li>
+        <li><a href="#">Chính sách bảo mật</a></li>
+        <li><a href="#">Chính sách vận chuyển</a></li>
+        <li><a href="#">Chính sách đổi trả</a></li>
+        <li><a href="#">Thông tin các trang TMĐT</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>LIÊN HỆ HỖ TRỢ</h4>
+      <p>Hotline 1: 0399338433</p>
+      <p>Hotline 2: 0987654321</p>
+      <p>Email: rudowatchfpt@gmail.com</p>
+
+      <h4>THEO DÕI CHÚNG TÔI TẠI</h4>
+      <div class="socials">
+        <img class="icon-facebook" src="img/fb.svg" alt="">
+        <img class="icon-instagram" src="img/ins.svg" alt="">
+        <img class="icon-youtube" src="img/yt.svg" alt="">
+        <img class="icon-discord" src="img/dis.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      ©7-2025 by rudowatch.vn. Hotline: 0987654321 – Giấy chứng nhận kinh doanh số: abcxyz <br>
+      Phản ánh thái độ phục vụ nhân viên qua Zalo: 0399669696
+    </p>
+  </div>
+</footer>
+
+<script src="card.js"></script>
+<script src="thuvien.js"></script>
+<script src="product-detail.js"></script>
+</body>
+</html>

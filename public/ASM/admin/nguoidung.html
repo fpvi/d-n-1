@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quản lý người dùng</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <img class="logo" src="img/logoweb.png" onclick="window.location.href='dashboard.html'">
+  <nav class="main-nav">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="sanpham.html">Sản phẩm</a>
+    <a class="nav-item" href="danhmuc.html">Danh mục</a>
+    <a class="nav-item" href="nguoidung.html">Người dùng</a>
+    <a class="nav-item" href="magiamgia.html">Mã giảm giá</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="table-box">
+    <h2>Danh sách người dùng</h2>
+    <table id="userTable">
+      <tr><th>ID</th><th>Họ tên</th><th>Email</th><th>Điện thoại</th><th>Vai trò</th></tr>
+    </table>
+  </div>
+</main>
+
+<footer>©2025 - Trang quản trị Rudo Watch</footer>
+
+<script>
+users.forEach(u => {
+  document.getElementById("userTable").innerHTML += `
+    <tr>
+      <td>${u.id}</td>
+      <td>${u.name}</td>
+      <td>${u.email}</td>
+      <td>${u.phone}</td>
+      <td>${u.role}</td>
+    </tr>
+  `;
+});
+</script>
+</body>
+</html>

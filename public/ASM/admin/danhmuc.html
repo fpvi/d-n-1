@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quản lý danh mục</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <img class="logo" src="img/logoweb.png" onclick="window.location.href='dashboard.html'">
+  <nav class="main-nav">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="sanpham.html">Sản phẩm</a>
+    <a class="nav-item" href="danhmuc.html">Danh mục</a>
+    <a class="nav-item" href="nguoidung.html">Người dùng</a>
+    <a class="nav-item" href="magiamgia.html">Mã giảm giá</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="table-box">
+    <h2>Danh mục sản phẩm</h2>
+    <table id="categoryTable"></table>
+  </div>
+
+
+  <div class="product-form">
+    <h3>Thêm danh mục mới</h3>
+    <div class="form-row">
+      <input type="text" id="catId" placeholder="ID danh mục (VD: 4)">
+      <input type="text" id="catName" placeholder="Tên danh mục">
+    </div>
+    <div class="form-row">
+      <input type="text" id="catDesc" placeholder="Mô tả danh mục">
+    </div>
+    <a href="#" class="submit-link">Thêm danh mục</a>
+  </div>
+</main>
+
+<footer>©2025 - Trang quản trị Rudo Watch</footer>
+
+
+<script type="module">
+  import { listCategories, addCategories } from "./views/categories.js";
+  listCategories();
+  addCategories();
+</script>
+
+</body>
+</html>
