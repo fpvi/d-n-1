@@ -1,6 +1,6 @@
 <?php
 
-class PageController
+class PageCtrl
 {
     // private $categoriesModel;
 
@@ -14,7 +14,8 @@ class PageController
     public function home()
     {
 
-        $products = $this->productModel->getAll();
+        $products = $this->productModel->getProductsBySize_id([1, 2]);
+        // print_r($products);
         include_once 'Views/home.php';
     }
 }

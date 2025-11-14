@@ -1,5 +1,5 @@
 <?php
-class UserController
+class UserCtrl
 {
     private $CourseModel;
     private $EnrollmeintModel;

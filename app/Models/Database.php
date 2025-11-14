@@ -4,7 +4,7 @@ class Database
   private $servername = "localhost";
   private $username = "root";
   private $password = "";
-  private $dbname = "ban_khoa_hoc";
+  private $dbname = "du_an_1";
   private $conn;
 
   function __construct()
@@ -77,9 +77,18 @@ class Database
       echo $sql . "<br>" . $e->getMessage();
     }
   }
+  // lọc tìm kiếm đảm bảo k bị hack
+  function fil($str)
+  {
+    $str = trim($_GET['search'] ?? '');
+    $str = strip_tags($str);
+    $str = htmlspecialchars($str, ENT_QUOTES);
+    return $str;
+  }
 
   function __destruct()
   {
     $this->conn = null;
   }
+
 }

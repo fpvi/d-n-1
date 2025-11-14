@@ -38,8 +38,8 @@
         Product images &copy; Unsplash. For demonstration purposes only.
     </div>
 </footer>
-<link rel="stylesheet" href="Views/assets/js/script.js">
-<script src="Views/assets/js/script.js"></script>
+<link rel="stylesheet" href="<?php echo BASE_URL; ?>Views/assets/js/script.js">
+<script src="<?php echo BASE_URL; ?>Views/assets/js/script.js"></script>
 </body>
 
 </html>

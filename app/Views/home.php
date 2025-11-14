@@ -1,6 +1,7 @@
 <!-- Main Banner Full Screen -->
+
 <section class="main-banner">
-  <video autoplay muted loop playsinline src="Views/assets/image/videobanner.mp4"></video>
+  <video autoplay muted loop playsinline src="<?php echo BASE_URL; ?>Views/assets/image/videobanner.mp4"></video>
   <div class="banner-content">
 
     <div class="banner-title">Elevate Your Time</div>
@@ -209,7 +210,7 @@
 
 <!-- Section Banner (Full Width) -->
 <div class="mid-banner scroll-reveal dark-filter">
-  <img src="Views/assets/image/mainbanner1.png" alt="">
+  <img src="<?php echo BASE_URL; ?>Views/assets/image/mainbanner1.png" alt="">
   <div class="mid-banner-title">Elevate Your Time</div>
   <button class="mid-banner-glass-button">Shop Now</button>
 </div>

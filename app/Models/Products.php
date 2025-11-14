@@ -10,47 +10,40 @@ class Products
 
   function getAll()
   {
-    $sql = "SELECT * FROM sanpham";
+    $sql = "SELECT * FROM products";
     return $this->db->query($sql);
   }
 
-  function getPro($sort = null, $limit = null, $categories = null, $teacher = null, $search = null)
+  function getPro($limit = null, $categories = null, $brand = null, $search = null)
   {
-    $sql = 'SELECT * FROM Products';
+    $sql = 'SELECT * FROM products';
     $params = [];
     $where = [];
 
     //lọc thư mục 
     if (!empty($categories)) {
       $placeholders = implode(',', array_fill(0, count($categories), '?'));
-      $where[] = 'category_id IN (' . $placeholders . ')';
+      $where[] = 'category_id IN (  ' . $placeholders . ')';
       $params = array_merge($params, $categories);
     }
 
-    // lọc giản viên
-    if (!empty($teacher)) {
-      $placeholders = implode(',', array_fill(0, count($teacher), '?'));
-      $where[] = 'teacher_id IN (' . $placeholders . ')';
-      $params = array_merge($params, $teacher);
+    // lọc hảng
+    if (!empty($brand)) {
+      $placeholders = implode(',', array_fill(0, count($brand), '?'));
+      $where[] = 'brand_id IN (' . $placeholders . ')';
+      $params = array_merge($params, $brand);
     }
     // tìm kiếm
     if (!empty($search) || $search == 0) {
-      $where[] = 'title LIKE ?';
+      $where[] = 'name LIKE ?';
       $params[] = '% ' . $search . '%';
     }
 
     // nối where
     if ($where) {
-      $sql .= ' where ' . implode(' and ', $where) . 'and status = 1';
+      $sql .= ' where ' . implode(' and ', $where);
     } else {
-      $sql .= ' where status = 1';
-    }
-
-    // xấp xếp 
-    if ($sort === 'asc') {
-      $sql .= " ORDER BY price ASC";
-    } elseif ($sort === 'desc') {
-      $sql .= " ORDER BY price DESC";
+      $sql .= ' status = "published" ';
     }
 
     // Giới hạn số lượng
@@ -62,31 +55,47 @@ class Products
     return $this->db->query($sql, ...$params);
   }
 
-  function couById($id = null)
+  function getProductById($id = null)
   {
-    $sql = 'SELECT * FROM Products where id = ? ';
+    $sql = 'SELECT * FROM Products where id = ? and status = "published"';
     return $this->db->queryOne($sql, $id);
 
   }
-  // lọc tìm kiếm đảm bảo k bị hack
-  function fil($str)
+  function getProductsByColor_id($id)
   {
-    $str = trim($_GET['search'] ?? '');
-    $str = strip_tags($str);
-    $str = htmlspecialchars($str, ENT_QUOTES);
-    return $str;
+    $params = [];
+    $sql = 'SELECT products.*, variants.color_id
+    FROM products
+    INNER JOIN variants ON products.id  = variants.product_id';
+
+    $placeholders = implode(',', array_fill(0, count($id), '?'));
+    $sql .= " WHERE variants.color_id in ( $placeholders );";
+    return $this->db->query($sql, ...$id);
   }
-  // Lấy nhiều khóa học trong array id
-  function getProductsrrayId($array_Productsd)
+  function getProductsBySize_id($id)
   {
-    if (empty($array_Productsd))
+    $params = [];
+    $sql = 'SELECT products.*, variants.size_id
+    FROM products
+    INNER JOIN variants ON products.id  = variants.product_id';
+
+    $placeholders = implode(',', array_fill(0, count($id), '?'));
+    $sql .= " WHERE variants.size_id in ( $placeholders );";
+    return $this->db->query($sql, ...$id);
+  }
+
+  // Lấy nhiều khóa học trong array id  
+  function getProductsrray($array_Products)
+  {
+
+    if (empty($array_Products))
       return [];
 
-    $placeholders = implode(',', array_fill(0, count($array_Productsd), '?'));
+    $placeholders = implode(',', array_fill(0, count($array_Products), '?'));
 
-    $sql = "SELECT * FROM Products WHERE id IN ($placeholders) and status = 1 ";
+    $sql = "SELECT * FROM Products WHERE id IN ($placeholders) and status = 'published' ";
 
-    return $this->db->query($sql, ...$array_Productsd);
+    return $this->db->query($sql, ...$array_Products);
 
   }
 }

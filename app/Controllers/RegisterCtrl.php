@@ -1,5 +1,5 @@
 <?php
-class RegisterController
+class RegisterCtrl
 {
     private $CourseModel;
 

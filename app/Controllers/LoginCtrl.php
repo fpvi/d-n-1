@@ -1,5 +1,5 @@
 <?php
-class LoginController
+class LoginCtrl
 {
     private $CourseModel;
     private $UserModel;
