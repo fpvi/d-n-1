@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>DarkTime | Modern Watch Seller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/detail.css" />
+</head>
+<body>
+  <!-- <div class="gradient-blob"></div>
+  <div class="gradient-blob gradient-blob-2"></div>
+  <div class="gradient-blob gradient-blob-3"></div> -->
+  <!-- Header with Glassmorphism -->
+  <header>
+    <div class="header-container">
+      <div class="logo" style="color: white;"><a href="index.html"></a>Zero Watch</div>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="favorites.html">Yêu thích</a>
+        <a href="cart.html">Giỏ <span>(1)</span></a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="login.html">Đăng nhập</a>
+      </nav>
+    </div>
+  </header>
+
+<section class="product-section">
+    <!-- Section 1: Product Gallery and Information -->
+    <section class="product-main-grid scroll-reveal">
+      <!-- Left Box: Product Gallery -->
+      <div class="product-gallery-box">
+        <button class="gallery-nav-btn left" aria-label="Previous image">&lt;</button>
+        <div class="main-image-area">
+          <img src="https://images.unsplash.com/photo-1518551937742-d7cb8f32a9b8?auto=format&fit=crop&w=600&q=80" alt="Main Watch Image" id="mainProductImage">
+        </div>
+        <div class="thumb-gallery-area" id="productThumbnails">
+          <div class="thumb-image-box active"><img src="https://images.unsplash.com/photo-1518551937742-d7cb8f32a9b8?auto=format&fit=crop&w=200&q=80" alt="Watch Thumbnail Black"></div>
+          <div class="thumb-image-box"><img src="https://images.unsplash.com/photo-1456086272139-7d6b1047d1a2?auto=format&fit=crop&w=200&q=80" alt="Watch Thumbnail Silver"></div>
+          <div class="thumb-image-box"><img src="https://images.unsplash.com/photo-1518732714860-80c9b84c93fb?auto=format&fit=crop&w=200&q=80" alt="Watch Thumbnail Gold"></div>
+        </div>
+        <button class="gallery-nav-btn right" aria-label="Next image">&gt;</button>
+      </div>
+      <!-- Right Box: Product Details -->
+      <div class="product-details-box">
+        <div>
+          <span class="product-dt-name">ChronoX Pro Watch</span>
+          <div class="product-sku">SKU: CX2009-PRO</div>
+          <div class="product-dt-price">5000000 VND</div>
+        </div>
+        <div class="attribute-group">
+          <div class="attribute-label">Color</div>
+          <div class="color-options">
+            <button class="color-option-btn selected" aria-label="Black" data-color="black">
+              <span class="color-swatch color-black"></span>
+            </button>
+            <button class="color-option-btn" aria-label="Silver" data-color="red">
+              <span class="color-swatch color-silver"></span>
+            </button>
+            <button class="color-option-btn" aria-label="Gold" data-color="gold">
+              <span class="color-swatch color-gold"></span>
+            </button>
+          </div>
+        </div>
+        <div class="attribute-group">
+          <div class="attribute-label">Type</div>
+          <div class="type-options">
+            <button class="type-option-btn selected">Standard</button>
+            <button class="type-option-btn">Sport</button>
+            <button class="type-option-btn">Luxury</button>
+          </div>
+        </div>
+        <div class="quantity-group">
+          <div class="attribute-label">Quantity</div>
+          <div class="quantity-selector">
+            <button class="quantity-btn" aria-label="Decrease quantity" id="decrementQty">-</button>
+            <input type="number" readonly class="quantity-value" id="quantityInput" value="1" min="1">
+            <button class="quantity-btn" aria-label="Increase quantity" id="incrementQty">+</button>
+          </div>
+        </div>
+        <div class="action-group">
+          <button class="glass-button">Buy Now</button>
+          <button class="cta-btn secondary">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2: Description and Specifications -->
+    <section class="product-info-grid scroll-reveal">
+      <!-- Left Box: Description -->
+      <div class="description-box">
+        <h2>Description</h2>
+        <p class="description-content">
+          The ChronoX Pro Watch elegantly combines advanced engineering and timeless design, making it a statement piece for any occasion. Featuring a robust casing, high-precision quartz movement, and an interchangeable strap system, this watch is crafted for those who demand both style and reliability. With 50m water resistance, glare-resistant sapphire glass, and a two-year warranty, ChronoX Pro is built to last—just like your ambitions.
+        </p>
+      </div>
+      <!-- Right Box: Specifications -->
+      <div class="specs-box">
+        <h2>Specifications</h2>
+        <table class="specs-table">
+          <tr><td>Case Diameter: 42 mm</td></tr>
+          <tr><td>Movement: Quartz</td></tr>
+          <tr><td>Water Resistance: 50 meters</td></tr>
+          <tr><td>Glass: Sapphire Crystal</td></tr>
+          <tr><td>Warranty: 2 Years</td></tr>
+        </table>
+      </div>
+    </section>
+
+    
+</section>
+<!-- <div class="mid-banner scroll-reveal dark-filter">
+    <img src="./image/mainbanner1.png" alt="">
+    <div class="mid-banner-title">Elevate Your Time</div>
+    <button class="mid-banner-glass-button">Shop Now</button>
+  </div> -->
+
+  <section class="section scroll-reveal" id="trending-products">
+    <div class="section-header">
+      <div class="section-title">Sản phẩm liên quan</div>
+      <button class="section-action">Tất cả</button>
+    </div>
+    <div class="product-grid">
+      <!-- Four Trending Product Boxes -->
+      <div class="product-box">
+        <div class="product-icons">
+          <button class="icon-btn" aria-label="Add to cart">
+            <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Add to favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Rugged Travel Watch" class="product-img">
+        <div class="product-name">Rugged Travel Watch</div>
+        <div class="product-price">5000000 VND</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-box">
+        <div class="product-icons">
+          <button class="icon-btn" aria-label="Add to cart">
+            <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Add to favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=400&q=80" alt="Minimalist White Watch" class="product-img">
+        <div class="product-name">Minimalist White Watch</div>
+        <div class="product-price"><span class="product-old-price">9000000</span>5000000 VND</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-box">
+        <div class="product-icons">
+          <button class="icon-btn" aria-label="Add to cart">
+            <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Add to favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=400&q=80" alt="Rose Gold Watch" class="product-img">
+        <div class="product-name">Rose Gold Watch</div>
+        <div class="product-price">5000000 VND</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-box">
+        <div class="product-icons">
+          <button class="icon-btn" aria-label="Add to cart">
+            <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Add to favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80" alt="Ceramic Blue Watch" class="product-img">
+        <div class="product-name">Ceramic Blue Watch</div>
+        <div class="product-price"><span class="product-old-price">9000000</span>5000000 VND</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-row">
+      <div class="footer-col">
+        <div class="footer-col-head">SHOP</div>
+        <div class="footer-col-list">
+          <a class="footer-col-link" href="#">Men's Watches</a>
+          <a class="footer-col-link" href="#">Women's Watches</a>
+          <a class="footer-col-link" href="#">Luxury Collection</a>
+          <a class="footer-col-link" href="#">Limited Editions</a>
+          <a class="footer-col-link" href="#">Sale</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">SUPPORT</div>
+        <div class="footer-col-list">
+          <a class="footer-col-link" href="#">Shipping Info</a>
+          <a class="footer-col-link" href="#">Return Policy</a>
+          <a class="footer-col-link" href="#">Warranty</a>
+          <a class="footer-col-link" href="#">FAQs</a>
+          <a class="footer-col-link" href="#">Contact Support</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">ABOUT</div>
+        <div class="footer-col-list">
+          <a class="footer-col-link" href="#">Our Story</a>
+          <a class="footer-col-link" href="#">Press</a>
+          <a class="footer-col-link" href="#">Careers</a>
+          <a class="footer-col-link" href="#">Sustainability</a>
+          <a class="footer-col-link" href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 DarkTime | All rights reserved. Crafted with <span style="color:var(--highlight);">precision</span> and <span style="color:var(--accent);">passion</span>. <br>
+      Product images &copy; Unsplash. For demonstration purposes only.
+    </div>
+  </footer>
+<link rel="stylesheet" href="./js/script.js">
+<script src="./js/script.js"></script>
+</body>
+</html>
