@@ -14,8 +14,12 @@ class PageCtrl
     public function home()
     {
 
-        $products = $this->productModel->getProductsBySize_id([1, 2]);
-        // print_r($products);
+        $productsFeatured = $this->productModel->getProducts(4, [1]);
+
+        $productsTrending = $this->productModel->getProducts(4, [2]);
+
+        $productsCollections = $this->productModel->getProducts(4, [3]);
+        // var_dump($productsFeatured);
         include_once 'Views/home.php';
     }
 }

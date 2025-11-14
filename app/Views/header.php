@@ -18,13 +18,13 @@
     <!-- Header with Glassmorphism -->
     <header>
         <div class="header-container">
-            <div class="logo" style="color: white;">Zero Watch</div>
+            <div class="logo" style="color: white;"><a href="index.html"></a>Zero Watch</div>
             <nav>
-                <a href="#" class="active">Home</a>
-                <a href="#">Favorite</a>
-                <a href="#">Shop</a>
-                <a href="#">Contact</a>
-                <a href="#">Login</a>
+                <a href="index.html" class="active">Trang chủ</a>
+                <a href="favorites.html">Yêu thích</a>
+                <a href="cart.html">Giỏ <span>(1)</span></a>
+                <a href="contact.html">Liên hệ</a>
+                <a href="login.html">Đăng nhập</a>
             </nav>
         </div>
     </header>

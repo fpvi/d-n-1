@@ -53,3 +53,56 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 });
+
+ // Main image gallery logic
+    const mainImage = document.getElementById('mainProductImage');
+    const thumbnails = Array.from(document.querySelectorAll('.thumb-image-box'));
+    const galleryImages = [
+      "https://images.unsplash.com/photo-1518551937742-d7cb8f32a9b8?auto=format&fit=crop&w=600&q=80", // Black
+      "https://images.unsplash.com/photo-1456086272139-7d6b1047d1a2?auto=format&fit=crop&w=600&q=80", // Silver
+      "https://images.unsplash.com/photo-1518732714860-80c9b84c93fb?auto=format&fit=crop&w=600&q=80"  // Gold
+    ];
+    let currentIndex = 0;
+    function updateMainImage(idx) {
+      currentIndex = idx;
+      mainImage.src = galleryImages[currentIndex];
+      thumbnails.forEach((thumb, i) =>
+        thumb.classList.toggle('active', i === currentIndex)
+      );
+    }
+    thumbnails.forEach((thumb, i) =>
+      thumb.addEventListener('click', () => updateMainImage(i))
+    );
+    document.querySelector('.gallery-nav-btn.left').addEventListener('click', () =>
+      updateMainImage((currentIndex - 1 + galleryImages.length) % galleryImages.length)
+    );
+    document.querySelector('.gallery-nav-btn.right').addEventListener('click', () =>
+      updateMainImage((currentIndex + 1) % galleryImages.length)
+    );
+
+    // Color select
+    document.querySelectorAll('.color-option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.color-option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    // Type select
+    document.querySelectorAll('.type-option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.type-option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    // Quantity logic
+    const qtyInput = document.getElementById('quantityInput');
+    document.getElementById('decrementQty').onclick = () => {
+      let val = Math.max(1, parseInt(qtyInput.value)-1);
+      qtyInput.value = val;
+    };
+    document.getElementById('incrementQty').onclick = () => {
+      let val = Math.min(99, parseInt(qtyInput.value)+1);
+      qtyInput.value = val;
+    };

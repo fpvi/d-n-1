@@ -1,5 +1,94 @@
-<!-- Main Banner Full Screen -->
+<?php
+$html_products_featured = '';
+foreach ($productsFeatured as $item) {
+  $html_products_featured .= '<div class="product-box">
+      <div class="product-icons">
+        <button class="icon-btn" aria-label="Add to cart">
+          <!-- SVG Cart Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Add to favorites">
+          <!-- SVG Heart Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </button>
+      </div>
+      <img src = "' . $item['image_url'] . '"
+        alt="Classic Black Watch" class="product-img">
+      <div class="product-name">' . $item['name'] . '</div>
+      <div class="product-price">' . number_format($item['price'], 0) . ' VND</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>';
+}
 
+
+$html_products_trending = '';
+foreach ($productsTrending as $item) {
+  $html_products_trending .= '<div class="product-box">
+      <div class="product-icons">
+        <button class="icon-btn" aria-label="Add to cart">
+          <!-- SVG Cart Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Add to favorites">
+          <!-- SVG Heart Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </button>
+      </div>
+      <img src = "' . $item['image_url'] . '"
+        alt="Classic Black Watch" class="product-img">
+      <div class="product-name">' . $item['name'] . '</div>
+      <div class="product-price">' . number_format($item['price'], 0) . ' VND</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>';
+}
+
+$html_products_Collections = '';
+foreach ($productsCollections as $item) {
+  $html_products_Collections .= '<div class="product-box">
+      <div class="product-icons">
+        <button class="icon-btn" aria-label="Add to cart">
+          <!-- SVG Cart Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Add to favorites">
+          <!-- SVG Heart Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </button>
+      </div>
+      <img src = "' . $item['image_url'] . '"
+        alt="Classic Black Watch" class="product-img">
+      <div class="product-name">' . $item['name'] . '</div>
+      <div class="product-price">' . number_format($item['price'], 0) . ' VND</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>';
+}
+
+
+;
+
+
+
+
+?>
+<!-- Main Banner Full Screen -->
 <section class="main-banner">
   <video autoplay muted loop playsinline src="<?php echo BASE_URL; ?>Views/assets/image/videobanner.mp4"></video>
   <div class="banner-content">
@@ -21,95 +110,7 @@
   </div>
   <div class="product-grid">
     <!-- Product Box 1 -->
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <!-- SVG Cart Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <!-- SVG Heart Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80"
-        alt="Classic Black Watch" class="product-img">
-      <div class="product-name">Classic Black Watch</div>
-      <div class="product-price"><span class="product-old-price">9000000</span>5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <!-- Product Box 2 -->
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80"
-        alt="Luxury Silver Watch" class="product-img">
-      <div class="product-name">Luxury Silver Watch</div>
-      <div class="product-price">5000000 VND </div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <!-- Product Box 3 -->
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=400&q=80"
-        alt="Modern Chronograph" class="product-img">
-      <div class="product-name">Modern Chronograph</div>
-      <div class="product-price"><span class="product-old-price">9000000</span>5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <!-- Product Box 4 -->
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=400&q=80"
-        alt="Retro Gold Watch" class="product-img">
-      <div class="product-name">Retro Gold Watch</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
+    <?= $html_products_featured ?>
   </div>
 </section>
 
@@ -121,90 +122,7 @@
   </div>
   <div class="product-grid">
     <!-- Four Trending Product Boxes -->
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
-        alt="Rugged Travel Watch" class="product-img">
-      <div class="product-name">Rugged Travel Watch</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=400&q=80"
-        alt="Minimalist White Watch" class="product-img">
-      <div class="product-name">Minimalist White Watch</div>
-      <div class="product-price"><span class="product-old-price">9000000</span>5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=400&q=80"
-        alt="Rose Gold Watch" class="product-img">
-      <div class="product-name">Rose Gold Watch</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80"
-        alt="Ceramic Blue Watch" class="product-img">
-      <div class="product-name">Ceramic Blue Watch</div>
-      <div class="product-price"><span class="product-old-price">9000000</span>5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
+    <?= $html_products_trending ?>
   </div>
 </section>
 
@@ -223,90 +141,7 @@
   </div>
   <div class="product-grid">
     <!-- Four Best Collection Boxes -->
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80"
-        alt="Titanium Adventure Watch" class="product-img">
-      <div class="product-name">Titanium Adventure Watch</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80"
-        alt="Elegant Night Watch" class="product-img">
-      <div class="product-name">Elegant Night Watch</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=400&q=80"
-        alt="Collector's Edition" class="product-img">
-      <div class="product-name">Collector's Edition</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
-    <div class="product-box">
-      <div class="product-icons">
-        <button class="icon-btn" aria-label="Add to cart">
-          <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.604-2.083l2.396-9.917h-16v-2h-3v2h1.604l3.452 13.917a2 2 0 0 0 1.944 1.25h10.192a2 2 0 0 0 1.944-1.25l.588-2.333zm-13.604-11.083v-2h16v2h-16z" />
-          </svg>
-        </button>
-        <button class="icon-btn" aria-label="Add to favorites">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="22" width="22" viewBox="0 0 24 24">
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
-        alt="Urban Street Watch" class="product-img">
-      <div class="product-name">Urban Street Watch</div>
-      <div class="product-price">5000000 VND</div>
-      <button class="buy-btn">Buy Now</button>
-    </div>
+    <?= $html_products_Collections ?>
   </div>
 </section>
 

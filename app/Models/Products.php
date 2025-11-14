@@ -14,16 +14,19 @@ class Products
     return $this->db->query($sql);
   }
 
-  function getPro($limit = null, $categories = null, $brand = null, $search = null)
+  function getProducts(int $limit = 16, array $categories = [], array $brand = [], string $search = '')
   {
-    $sql = 'SELECT * FROM products';
+    $sql = 'SELECT products.*, MIN(product_images.image_url) image_url, MIN(variants.price) price
+    FROM Products 
+    INNER JOIN product_images ON products.id = product_images.product_id
+    INNER JOIN variants ON products.id = variants.product_id';
     $params = [];
     $where = [];
 
     //lọc thư mục 
     if (!empty($categories)) {
       $placeholders = implode(',', array_fill(0, count($categories), '?'));
-      $where[] = 'category_id IN (  ' . $placeholders . ')';
+      $where[] = 'category_id IN (' . $placeholders . ')';
       $params = array_merge($params, $categories);
     }
 
@@ -35,23 +38,21 @@ class Products
     }
     // tìm kiếm
     if (!empty($search) || $search == 0) {
-      $where[] = 'name LIKE ?';
-      $params[] = '% ' . $search . '%';
+      $where[] = 'products.name LIKE ?';
+      $params[] = '%' . $search . '%';
     }
 
     // nối where
     if ($where) {
-      $sql .= ' where ' . implode(' and ', $where);
+      $sql .= ' where ' . implode(' and ', $where) . ' AND status = "published" GROUP BY products.id ';
     } else {
-      $sql .= ' status = "published" ';
+      $sql .= 'AND status = "published" GROUP BY products.id ';
     }
 
     // Giới hạn số lượng
     if ($limit) {
       $sql .= " LIMIT " . intval($limit);
     }
-
-
     return $this->db->query($sql, ...$params);
   }
 
@@ -98,4 +99,5 @@ class Products
     return $this->db->query($sql, ...$array_Products);
 
   }
+
 }
