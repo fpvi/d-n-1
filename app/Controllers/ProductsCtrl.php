@@ -17,5 +17,11 @@ class ProductsCtrl
         // $produts = $this->productModel->getAll();
         // var_dump($produts);
     }
+    public function details($id)
+    {
+        $product = $this->productModel->getProductById($id);
+        var_dump($product);
+        var_dump($_GET);
+    }
 }
 ?>

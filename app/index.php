@@ -18,7 +18,6 @@ $parts = explode('/', $url);
 define('BASE_URL', 'http://' . $_SERVER['HTTP_HOST'] . str_replace('index.php', '', $_SERVER['SCRIPT_NAME']));
 
 // === LOGIC ĐIỀU HƯỚNG MỚI ==
-
 include_once "./Views/header.php";
 if (empty($parts[0])) {
     // TRƯỜNG HỢP 1: TRANG CHỦ
