@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 14, 2025 at 05:42 AM
+-- Generation Time: Nov 15, 2025 at 07:23 AM
 -- Server version: 8.0.44
 -- PHP Version: 8.3.16
 
@@ -142,9 +142,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Đồng hồ nam', 'dong-ho-nam', '2025-11-10 08:54:30', '2025-11-10 08:54:30'),
-(2, 'Đồng hồ nữ', 'dong-ho-nu', '2025-11-10 08:54:30', '2025-11-10 08:54:30'),
-(3, 'Đồng hồ thông minh', 'dong-ho-thong-minh', '2025-11-10 08:54:30', '2025-11-10 08:54:30');
+(1, 'sản phẩm nổi bật', 'san-pham-noi-bat', '2025-11-10 08:54:30', '2025-11-14 08:13:15'),
+(2, 'sản phẩm xu hướng', 'san-pham-xu-huong', '2025-11-10 08:54:30', '2025-11-14 14:43:50'),
+(3, 'Bộ sưu tập đẹp nhất\n', 'bo-suu-tap-dep-nhat', '2025-11-10 08:54:30', '2025-11-14 14:50:48');
 
 -- --------------------------------------------------------
 
@@ -344,11 +344,36 @@ CREATE TABLE `product_images` (
 --
 
 INSERT INTO `product_images` (`id`, `product_id`, `image_url`, `alt_text`, `created_at`, `updated_at`) VALUES
-(1, 26, 'https://via.placeholder.com/600/000000/FFFFFF?text=Rolex+Milgauss', 'Rolex Milgauss 116400GV', '2025-11-10 08:59:31', '2025-11-10 08:59:31'),
-(2, 27, 'https://via.placeholder.com/600/000000/FFFFFF?text=Seiko+GMT', 'Seiko 5 GMT SSK001', '2025-11-10 08:59:31', '2025-11-10 08:59:31'),
-(3, 28, 'https://via.placeholder.com/600/FFC0CB/000000?text=Casio+SHEEN', 'Casio SHEEN SHE-3047PG', '2025-11-10 08:59:31', '2025-11-10 08:59:31'),
-(4, 29, 'https://via.placeholder.com/600/000000/FFFFFF?text=Rolex+Yacht-Master', 'Rolex Yacht-Master 40', '2025-11-10 08:59:31', '2025-11-10 08:59:31'),
-(5, 30, 'https://via.placeholder.com/600/E0E0E0/000000?text=King+Seiko', 'King Seiko SBPK', '2025-11-10 08:59:31', '2025-11-10 08:59:31');
+(6, 1, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio G-Shock GA-2100', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(7, 2, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Datejust 41', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(8, 3, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko 5 Sports SRPD', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(9, 4, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Lady-Datejust 28', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(10, 5, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio A168WG Vintage', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(11, 6, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko Presage Cocktail Time', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(12, 7, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio G-Shock DW-5600', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(13, 8, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Submariner Date', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(14, 9, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko Prospex \"Tuna\"', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(15, 10, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio Baby-G BGD-560', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(16, 11, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Cosmograph Daytona', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(17, 12, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko SKX007', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(18, 13, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio Edifice EFR-526D', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(19, 14, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Oyster Perpetual 36', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(20, 15, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko Astron GPS Solar', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(21, 16, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio MTP-V006D', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(22, 17, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex GMT-Master II \"Pepsi\"', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(23, 18, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko 5 \"Tuxedo\" SRPE', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(24, 19, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio F-91W', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(25, 20, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Sky-Dweller', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(26, 21, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko Grand Seiko SBGA211', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(27, 22, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio Pro Trek PRG-600', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(28, 23, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Explorer 36', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(29, 24, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko Alpinist SARB017', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(30, 25, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio G-Shock GMW-B5000', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(31, 26, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Milgauss 116400GV', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(32, 27, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Seiko 5 GMT SSK001', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(33, 28, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Casio SHEEN SHE-3047PG', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(34, 29, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'Rolex Yacht-Master 40', '2025-11-14 08:31:00', '2025-11-14 08:31:00'),
+(35, 30, 'https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80', 'King Seiko SBPK', '2025-11-14 08:31:00', '2025-11-14 08:31:00');
 
 -- --------------------------------------------------------
 
@@ -441,6 +466,7 @@ CREATE TABLE `variants` (
 --
 
 INSERT INTO `variants` (`id`, `product_id`, `color_id`, `size_id`, `price`, `quantity`, `sku`, `image`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 1, 500000000.00, 0, 'TEST', 'no', '2025-11-14 12:13:58', '2025-11-14 12:13:58'),
 (6, 1, 1, 1, 3500000.00, 50, 'CS-GA2100-BLK-40', 'product-1-black.jpg', '2025-11-10 09:00:19', '2025-11-10 09:00:19'),
 (7, 2, 5, 2, 350000000.00, 5, 'RLX-DJ41-BLU-42', 'product-2-blue.jpg', '2025-11-10 09:00:19', '2025-11-10 09:00:19'),
 (8, 3, 1, 2, 7000000.00, 30, 'SK-SRPD-BLK-42', 'product-3-black.jpg', '2025-11-10 09:00:19', '2025-11-10 09:00:19'),
@@ -711,7 +737,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `shipping_methods`
