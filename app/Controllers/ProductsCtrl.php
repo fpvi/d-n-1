@@ -22,6 +22,8 @@ class ProductsCtrl
         $product = $this->productModel->getProductById($id);
         var_dump($product);
         var_dump($_GET);
+
+        include_once("Views/detail.php");
     }
 }
 ?>

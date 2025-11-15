@@ -20,7 +20,7 @@
         <div class="header-container">
             <div class="logo" style="color: white;"><a href="index.html"></a>Zero Watch</div>
             <nav>
-                <a href="index.html" class="active">Trang chủ</a>
+                <a href="<?= BASE_URL ?>" class="active">Trang chủ</a>
                 <a href="favorites.html">Yêu thích</a>
                 <a href="cart.html">Giỏ <span>(1)</span></a>
                 <a href="contact.html">Liên hệ</a>
